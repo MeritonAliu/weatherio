@@ -7,12 +7,12 @@ export default function Footer() {
   return (
     <footer className='footer'>
       <Row className="justify-content-between">
-        <Col sm={4} className="text-sm-left text-center"> {/* Adjusted for medium screens */}
+        <Col sm={4} className="text-sm-left text-center"> {}
           <div className='credits'>
             Made by <a href="https://github.com/meritonaliu" target="_blank" rel="noopener noreferrer">Meriton Aliu</a>
           </div>
         </Col>
-        <Col sm={4} className="text-center d-flex justify-content-center align-items-center"> {/* Centered and adjusted flex properties */}
+        <Col sm={4} className="text-center d-flex justify-content-center align-items-center"> {}
           <div className='links'>
             <a href="https://github.com/meritonaliu" target="_blank" rel="noopener noreferrer" className="social-link">
               <FontAwesomeIcon icon={faGithub} />
@@ -22,7 +22,7 @@ export default function Footer() {
             </a>
           </div>
         </Col>
-        <Col sm={4} className="text-sm-right text-center"> {/* Adjusted for medium screens */}
+        <Col sm={4} className="text-sm-right text-center"> {}
           <div className='year'>
             2023 Ⓒ
           </div>

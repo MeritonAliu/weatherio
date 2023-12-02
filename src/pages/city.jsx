@@ -4,7 +4,7 @@ import "../styles/main.scss";
 export default function City() {
   const [city, setCity] = useState("");
   const [weatherData, setWeatherData] = useState(null);
-  const [error, setError] = useState(null); // New state for tracking errors
+  const [error, setError] = useState(null);
 
   const handleEnterKeyPress = (event) => {
     if (event.key === "Enter") {
@@ -17,7 +17,7 @@ export default function City() {
     setError(null);
     setWeatherData(null);
     if (city) {
-      const apiKey = process.env.REACT_APP_OPENWEATHERMAP_API_KEY; // Replace with your API key
+      const apiKey = process.env.REACT_APP_OPENWEATHERMAP_API_KEY; 
       const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
       try {
