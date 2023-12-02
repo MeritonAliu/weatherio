@@ -1,0 +1,37 @@
+.test {
+  background: rgb(63,57,150);
+background: linear-gradient(90deg, rgba(63,57,150,1) 0%, rgba(7,133,181,1) 43%, rgba(25,216,255,1) 100%);
+}
+
+.citypage{
+
+
+  input{
+    font-size: 16px;
+    font-size: max(16px, 1em);
+    font-family: inherit;
+    padding: 0.25em 0.5em;
+    background-color: #fff;
+    border: 2px solid;
+  }
+
+  button{
+    font-size: 16px;
+    font-size: max(16px, 1em);
+    font-family: inherit;
+    padding: 0.25em 0.5em;
+    background-color: #fff;
+    border: 2px solid;
+  }
+
+  .dataCard{
+    background-color: #fff;
+    border: 5px solid #bcd2ee;
+    border-radius: 30px;
+    padding: 10px;
+    margin-right: 15%;
+    margin-left: 15%;
+    margin-top: 20px;
+  }
+
+}
