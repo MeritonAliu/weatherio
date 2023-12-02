@@ -1,6 +1,8 @@
 
 export default function Worldview() {
-    <div>
-      worldview
-    </div>
+  return(
+    <>
+      <h1>Worldview</h1>
+    </>
+  );
 }
