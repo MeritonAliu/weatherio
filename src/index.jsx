@@ -4,6 +4,7 @@ import './styles/main.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Header from './components/header';
+import Footer from './components/footer';
 import { BrowserRouter } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -14,6 +15,7 @@ root.render(
     <BrowserRouter>
     <Header />
     <App />
+    <Footer />
     </BrowserRouter>
   </React.StrictMode>
 );
