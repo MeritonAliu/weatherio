@@ -1,6 +1,5 @@
 import './App.css';
-import React, { useState } from 'react';// Adjust the path as needed
-console.log(process.env) // remove this after you've confirmed it working
+import React, { useState } from 'react';
 
 function App() {
   const [city, setCity] = useState('');
@@ -8,18 +7,15 @@ function App() {
 
   const handleEnterKeyPress = (event) => {
     if (event.key === 'Enter') {
-      event.preventDefault(); // Prevent form submission
-      fetchWeatherData(); // Call the fetchWeatherData function
+      event.preventDefault();
+      fetchWeatherData(); 
     }
   };
 
   const fetchWeatherData = async () => {
     if (city) {
-      // Define your OpenWeather API key and API endpoint here
       const apiKey = process.env.REACT_APP_OPENWEATHERMAP_API_KEY; // Replace with your API key
-      console.log(apiKey)
-      console.log(city)
-      const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+      const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
       try {
         const response = await fetch(apiUrl);
@@ -60,6 +56,9 @@ function App() {
           <p>Temperature: {weatherData.main.temp}</p>
           <p>Feels Like: {weatherData.main.feels_like}</p>
           <p>Humidity: {weatherData.main.humidity}</p>
+          <p>Wind Speed: {weatherData.wind.speed}</p>
+          <img src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}.png`} alt={weatherData.weather[0].description} />
+          <p>{weatherData.weather[0].description}</p>
         </div>
       )}
     </div>
