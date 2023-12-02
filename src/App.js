@@ -42,13 +42,17 @@ function App() {
 
   return (
     <div className="App">
-      <input
-        type="text"
-        value={city}
-        onChange={handleCityChange}
-        onKeyDown={handleEnterKeyPress}
-        placeholder="Enter city name and press Enter"
-      />
+      <div>
+        <input
+          type="text"
+          value={city}
+          onChange={handleCityChange}
+          onKeyDown={handleEnterKeyPress}
+          placeholder="Enter city name and press Enter"
+        />
+        <button onClick={fetchWeatherData}>Get Weather</button>
+      </div>
+
 
       {weatherData && (
         <div>
