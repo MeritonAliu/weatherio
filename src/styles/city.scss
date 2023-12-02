@@ -1,37 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+
 .test {
   background: rgb(63,57,150);
 background: linear-gradient(90deg, rgba(63,57,150,1) 0%, rgba(7,133,181,1) 43%, rgba(25,216,255,1) 100%);
 }
 
-.citypage{
-
-
-  input{
-    font-size: 16px;
-    font-size: max(16px, 1em);
-    font-family: inherit;
-    padding: 0.25em 0.5em;
-    background-color: #fff;
-    border: 2px solid;
-  }
-
-  button{
-    font-size: 16px;
-    font-size: max(16px, 1em);
-    font-family: inherit;
-    padding: 0.25em 0.5em;
-    background-color: #fff;
-    border: 2px solid;
-  }
-
-  .dataCard{
-    background-color: #fff;
-    border: 5px solid #bcd2ee;
-    border-radius: 30px;
-    padding: 10px;
-    margin-right: 15%;
-    margin-left: 15%;
+  .citypage{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
     margin-top: 20px;
+
+    .search{
+      margin: 10px;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: flex-start;
+      height: 100%;
+      justify-content: center;
+      gap: 10px;
+
+      input{
+        align-self: center;
+        font-size: 16px;
+        font-size: max(16px, 1em);
+        font-family: inherit;
+        padding: 0.25em 0.5em;
+        // background-color: #fff;
+        border: 0px solid;
+        width: 125px;
+        // border-radius: 10px;
+        border-bottom: 2px solid #bcd2ee;
+      }
+  
+      button{
+        font-family: 'Roboto', sans-serif;
+        align-self: center;
+        font-size: 16px;
+        font-size: max(16px, 1em);
+        font-family: inherit;
+        padding: 0.25em 0.5em;
+        background-color: #bcd2ee;
+        border: 2px solid;
+        border-radius: 10px;
+      }
+    }
+    .dataCard{
+      align-self: center;
+      background-color: #fff;
+      border: 5px solid #bcd2ee;
+      border-radius: 30px;
+      padding: 10px;
+      max-width: 400px;
+      min-width: 400px;
+      margin-right: 10%;
+      margin-left: 10%;
+      margin-top: 20px;
+      justify-content: center;
+      display: flex;
+      
+      h1{
+        font-size: 24px;
+        font-family: inherit;
+        padding: 0.25em 0.5em;
+      }
+
+      p{
+        font-size: 16px;
+        font-family: inherit;
+        padding: 0.25em 0.5em;
+      }
+    }
+
+    .errorCard{
+      display: flex;
+      align-self: center;
+      justify-content: center;
+      background-color: #fff;
+      border: 5px solid rgba(255, 0, 0, 0.363);
+      border-radius: 30px;
+      padding: 10px;
+      max-width: 400px;
+      min-width: 400px;
+      margin-right: 10%;
+      margin-left: 10%;
+      margin-top: 20px;
+
+      p{
+
+      }
+    }
   }
 
-}

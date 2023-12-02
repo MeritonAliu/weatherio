@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/main.scss"
+import "../styles/main.scss";
 
 export default function City() {
   const [city, setCity] = useState("");
@@ -14,8 +14,8 @@ export default function City() {
   };
 
   const fetchWeatherData = async () => {
-    setError(null)
-    setWeatherData(null)
+    setError(null);
+    setWeatherData(null);
     if (city) {
       const apiKey = process.env.REACT_APP_OPENWEATHERMAP_API_KEY; // Replace with your API key
       const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -43,41 +43,38 @@ export default function City() {
 
   return (
     <div className="citypage">
-      <div className="search">
-      <div>
-        <input
-          type="text"
-          value={city}
-          onChange={handleCityChange}
-          onKeyDown={handleEnterKeyPress}
-          placeholder="Enter city name and press Enter"
-        />
-        <button onClick={fetchWeatherData}>Get Weather</button>
-      </div>
+        <div className="search">
+          <input
+            type="text"
+            value={city}
+            onChange={handleCityChange}
+            onKeyDown={handleEnterKeyPress}
+            placeholder="Enter city name"
+          />
+          <button onClick={fetchWeatherData}>Get Weather</button>
+        </div>
 
-      
         {weatherData && (
           <div className="dataCard">
-          <div>
-            <h2>Weather Data for {weatherData.name}</h2>
-            <p>Temperature: {weatherData.main.temp}</p>
-            <p>Feels Like: {weatherData.main.feels_like}</p>
-            <p>Humidity: {weatherData.main.humidity}</p>
-            <p>Wind Speed: {weatherData.wind.speed}</p>
-            <img
-              src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}.png`}
-              alt={weatherData.weather[0].description}
-            />
-            <p>{weatherData.weather[0].description}</p>
-          </div>      
+            <div>
+              <h1>Weather Data for {weatherData.name}</h1>
+              <p>Temperature: {weatherData.main.temp}</p>
+              <p>Feels Like: {weatherData.main.feels_like}</p>
+              <p>Humidity: {weatherData.main.humidity}</p>
+              <p>Wind Speed: {weatherData.wind.speed}</p>
+              <img
+                src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}.png`}
+                alt={weatherData.weather[0].description}
+              />
+              <p>{weatherData.weather[0].description}</p>
+            </div>
           </div>
         )}
-      </div>
-      {error && (
-        <div className="errorCard">
-          <p>{error}</p>
-        </div>
-      )}
+        {error && (
+          <div className="errorCard">
+            <p>{error}</p>
+          </div>
+        )}
     </div>
   );
 }
