@@ -1,23 +1,16 @@
 @use 'scss-reset/reset';
+@use 'header.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
 
 :root {
-  background-color: #6e6e6e;
+  background-color: #FFFF;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
 }
+// #490b3d purple #bd1e51# pink f1b814 yellow
 
 p{
-  color: #bcfd4c;
+  color: #490b3d;
 }
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
