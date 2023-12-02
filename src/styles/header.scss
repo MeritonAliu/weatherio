@@ -1,10 +1,14 @@
 .navi{
     background-color: #bcd2ee;
+    color: rgb(0, 0, 0); // Set text color to white
+    font-family: 'Roboto', sans-serif; // Set font to Roboto
+    font-weight: bold; // Make the text bold
     padding: 0 20px;
     height: 60px;
 }
 
 .navi, .navi * {
-  font-family: 'Roboto', sans-serif !important; // Apply Roboto font to all elements within .navi
-  font-weight: 500;
+  color: rgb(0, 0, 0); // Set text color to white
+  font-family: 'Roboto', sans-serif; // Set font to Roboto
+  font-weight: bold; // Make the text bold
 }

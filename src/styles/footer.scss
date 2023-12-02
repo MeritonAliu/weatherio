@@ -1,9 +1,29 @@
-.footer{
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+.footer {
   padding: 1rem;
-  background-color: #efefef;
-  text-align: center;
+  background-color: #bcd2ee;
+  color: rgb(0, 0, 0); 
+  font-family: 'Roboto', sans-serif; 
+  font-weight: bold; 
+  position:absolute;     
+  width:100%;     
+  bottom:0px;
+}
+
+.footer a {
+  color: rgb(0, 0, 0); 
+  text-decoration: none;
+}
+
+.social-link {
+  margin: 0 15px;
+  font-size: 1.25em; 
+}
+
+@media (max-width: 767.98px) {
+  .text-sm-left, .text-sm-right {
+    text-align: center !important;
+    margin: 0px 0px 10px 0px;
+  }
 }

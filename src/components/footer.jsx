@@ -1,19 +1,33 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { Row, Col } from 'react-bootstrap';
 
 export default function Footer() {
   return (
-    <div className='footer'>
-      <div className='credits'>
-        <p>
-        Made by <a href="https://github.com/meritonaliu" target="_blank" rel="noopener noreferrer">Meriton Aliu</a>
-        </p>
-      </div>
-      <div className='links'>
-
-      </div>
-      <div className='year'>
-        2023 Ⓒ
-      </div>
-    </div>
+    <footer className='footer'>
+      <Row className="justify-content-between">
+        <Col sm={4} className="text-sm-left text-center"> {/* Adjusted for medium screens */}
+          <div className='credits'>
+            Made by <a href="https://github.com/meritonaliu" target="_blank" rel="noopener noreferrer">Meriton Aliu</a>
+          </div>
+        </Col>
+        <Col sm={4} className="text-center d-flex justify-content-center align-items-center"> {/* Centered and adjusted flex properties */}
+          <div className='links'>
+            <a href="https://github.com/meritonaliu" target="_blank" rel="noopener noreferrer" className="social-link">
+              <FontAwesomeIcon icon={faGithub} />
+            </a>
+            <a href="https://linkedin.com/in/your-linkedin-id" target="_blank" rel="noopener noreferrer" className="social-link">
+              <FontAwesomeIcon icon={faLinkedin} />
+            </a>
+          </div>
+        </Col>
+        <Col sm={4} className="text-sm-right text-center"> {/* Adjusted for medium screens */}
+          <div className='year'>
+            2023 Ⓒ
+          </div>
+        </Col>
+      </Row>
+    </footer>
   );
 }
