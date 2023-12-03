@@ -43,38 +43,45 @@ export default function App() {
 
   return (
     <div className="citypage">
-        <div className="search">
-          <input
-            type="text"
-            value={city}
-            onChange={handleCityChange}
-            onKeyDown={handleEnterKeyPress}
-            placeholder="Enter city name"
-          />
-          <button onClick={fetchWeatherData}>Get Weather</button>
-        </div>
+      <div className="search">
+        <input
+          type="text"
+          value={city}
+          onChange={handleCityChange}
+          onKeyDown={handleEnterKeyPress}
+          placeholder="Enter city name"
+        />
+        <button onClick={fetchWeatherData}>Get Weather</button>
+      </div>
 
-        {weatherData && (
-          <div className="dataCard">
-            <div>
-              <h1>Weather Data for {weatherData.name}</h1>
-              <p>Temperature: {weatherData.main.temp}</p>
-              <p>Feels Like: {weatherData.main.feels_like}</p>
-              <p>Humidity: {weatherData.main.humidity}</p>
-              <p>Wind Speed: {weatherData.wind.speed}</p>
+      {weatherData && (
+        <div className="card">
+          <div className="card-body">
+            <div className="title-image">
+              <h1 className="card-title"> Weather for {weatherData.name}</h1>
               <img
                 src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}.png`}
                 alt={weatherData.weather[0].description}
               />
-              <p>{weatherData.weather[0].description}</p>
             </div>
+            <h5 className="card-subtitle mb-2 text-muted">
+              {" "}
+              Currently: {weatherData.weather[0].description}
+            </h5>
+            <ul>
+              <li>Temperature: {weatherData.main.temp}</li>
+              <li>Feels Like: {weatherData.main.feels_like}</li>
+              <li>Humidity: {weatherData.main.humidity}</li>
+              <li>Wind Speed: {weatherData.wind.speed}</li>
+            </ul>
           </div>
-        )}
-        {error && (
-          <div className="errorCard">
-            <p>{error}</p>
-          </div>
-        )}
+        </div>
+      )}
+      {error && (
+        <div className="errorCard">
+          <p>{error}</p>
+        </div>
+      )}
     </div>
   );
 }

@@ -29,41 +29,37 @@
       }
   
       button{
+        margin-top: 8px;
         font-family: 'Roboto', sans-serif;
         align-self: center;
+        align-items: center;
         font-size: 16px;
         font-size: max(16px, 1em);
         font-family: inherit;
         padding: 0.25em 0.5em;
         background-color: #bcd2ee;
         border: 2px solid;
-        border-radius: 10px;
+        border-radius: 30px;
       }
     }
-    .dataCard{
+
+    .card{
+      margin-top: 32px;
+      background-color: rgba(255, 0, 0, 0.247);
+      align-items: start;
       align-self: center;
-      background-color: #fff;
-      border: 5px solid #bcd2ee;
-      border-radius: 30px;
-      padding: 10px;
-      max-width: 400px;
-      min-width: 40%;
-      margin-right: 10%;
-      margin-left: 10%;
-      margin-top: 20px;
-      justify-content: center;
       display: flex;
+      border-radius: 30px;
+      border: none;
       
-      h1{
-        font-size: 24px;
-        font-family: inherit;
-        padding: 0.25em 0.5em;
+      .title-image{
+        display: flex;
+        flex-flow: row wrap;
+        gap: 12px;
       }
 
-      p{
-        font-size: 16px;
-        font-family: inherit;
-        padding: 0.25em 0.5em;
+      li{
+        color: rgb(0, 0, 0);
       }
     }
 
@@ -83,3 +79,7 @@
     }
   }
 
+@media only screen and (max-width: 350px){
+
+  
+}
